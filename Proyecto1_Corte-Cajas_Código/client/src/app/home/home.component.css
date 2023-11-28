@@ -1,0 +1,81 @@
+.square {
+    height: 45%;
+    width: 50%;
+    margin-top: -10rem;
+    margin-left: -10rem;
+}
+
+.second-square {
+    height: 45%;
+    width: 50%;
+    background-color:rgba(33,33,33, 0.95)
+}
+
+#color1 {
+    animation-name: grow-bar;
+    animation-duration: 3s;   
+}
+
+#color2 {
+    animation-name: grow-bar;
+    animation-duration: 4s; 
+}
+
+#color3 {
+    animation-name: grow-bar;
+    animation-duration: 1s;
+}
+
+#color4 {
+    animation-name: grow-bar;
+    animation-duration: 2s;
+}
+
+
+@keyframes grow-bar {
+    from { margin-top: 300%;}
+    to { margin-top: 0%;}
+    /*to {height: 100%;}*/
+    
+}
+
+
+@media screen and (max-width: 821px) {
+    .second-square{
+        width: 80%;
+        height: 35%;
+        padding: 5%;
+    }
+
+    .square{
+        width: 80%;
+        height: 35%;
+        margin-top: -5rem;
+        margin-left: -2rem;   
+    }
+
+    #title {
+        margin: 2%;
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .second-square{
+        width: 80%;
+        height: 45%;
+        padding: 5%;
+    }
+
+    .square{
+        width: 80%;
+        height: 40%;
+        margin-top: -5rem;
+        margin-left: -2rem;   
+    }
+
+    #title {
+        margin: 2%;
+    }
+    
+}
+

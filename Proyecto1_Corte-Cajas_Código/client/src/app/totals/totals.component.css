@@ -1,0 +1,45 @@
+@media print {
+
+    @page{
+        size: portrait A5;
+        color:black;
+        margin-top: 0;    
+    }
+
+    @page:left{
+        margin-left: 0;
+    }
+    @page:right{
+        margin-right: 0;
+    }
+    section{
+        visibility: hidden;
+        margin:10px;
+        padding:10px;
+    }
+
+    section table {
+         visibility: visible;
+    }
+
+    section table tr td{
+        
+        font-size: bold;
+        color:black;
+        margin:0;
+    }
+    
+    #header{
+        display:none;
+    }
+
+    #printButton {
+        display:none;
+    }
+
+    #checkWithdrawal {
+        display:none;
+    }
+}
+
+

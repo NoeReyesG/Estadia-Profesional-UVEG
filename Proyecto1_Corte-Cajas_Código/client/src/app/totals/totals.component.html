@@ -1,0 +1,35 @@
+ <section class="bg-gray-500 p-8 border-4 border-gray-400 rounded-xl" id="totalsModal">
+    <div id="header" class="flex mb-3">
+        <h1 class="grow text-center font-semibold text-lg text-gray-50 p-2">Totales</h1>
+        <button class="hover:bg-slate-500 rounded-full px-2.5" (click)="closeDialog()"><mat-icon class="hover:cursor-pointer pt-1 text-white">close</mat-icon></button> 
+    </div>
+    <div id="checkWithdrawal">
+        <mat-checkbox color="primary" (change)="finalMoneyWithdrawn($event);">¿Retiraste tu pico?</mat-checkbox>
+    </div>
+    <section id="totalsTable">
+    <table class="w-full table-auto text-center divide-y divide-purple-400">
+        <thead class="bg-gray-500">
+            <tr class="md:px-6 px-1 py-1.5 text-xs text-gray-50">
+                <th>Forma de pago</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-300">
+            <tr *ngFor="let currency of currencies" class="whitespace-nowrap + {{currency.color}}">
+                <td class="md:px-4 p-1 font-semibold text-white">{{currency.displayName}}</td>
+                <td class="md:px-4 p-1 font-semibold text-white">{{data.totales.value[currency.name]}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </section>
+    <div id="printButton" class="flex justify-end py-2 m-2">
+        <button class=" border text-gray-100 placeholder-gray-500 text-sm font-semibold rounded-lg hover:ring-gray-500 hover:border-gray-400 hover:bg-gray-600 block w-28 p-1.5 bg-gray-700 border-gray-400" 
+        printSectionId="totalsTable"
+        ngxPrint
+        [printStyle]="{table:{'margin':'auto', 'font-size':'x-large', 'border-collapse':'collapse'}, 
+                        th:{'padding':'0', 'text-align':'left'}, 
+                        td:{'padding':'10px', 'border-bottom': '1px solid #000'}, 
+                        tr:{'border-bottom': '1px solid #000'}}"
+        matTooltip="Imprimir totales"><mat-icon>print</mat-icon></button>
+    </div>
+</section>

@@ -1,0 +1,67 @@
+<section class=" main-container m-2 border border-green-500 h-30">
+    <section class="head">
+        <div class="bank-logo">
+            <img src="./assets/logo-bbva.png" alt="logo bancario bbva">
+        </div>
+        <div class="fill-info">Llenar una ficha por cada tipo de deposito(A, B ó C)</div>
+        <div id="cashier-name"><input style="text-align: right;" type="text" value="Noe Reyes"></div>
+        <div class="title">
+            <b>DEPOSITO EMPRESARIAL</b>
+        </div>
+        <div class="cash-dispenser-number">
+            <div class="teller-number"> 
+                <label for="teller-window-number">No DE CAJA</label>
+                <input type="number" id="teller-window-number">
+            </div>
+        </div>
+        <div class="coin">MONEDA</div>
+        <div class="national">
+            <mat-checkbox checked>Nacional</mat-checkbox>
+        </div>
+        <div class="usd">
+            <mat-checkbox>Dolares</mat-checkbox>
+        </div>
+        
+    </section>
+    <section class="full-body">
+        <section class="body-head">
+            <section class="agreement-number">
+                <div>Numero de convenio</div>
+                <div style="font-size: x-large;"><b>76456</b></div>
+            </section>
+            <section class="reference">
+                <div>Referencia</div>
+                <div><input type="text" value="050000000572"></div>
+            </section>
+            <section class="date">
+                <div>FECHA (DD/MM/AA)</div>
+                <div style="font-size: large;"><b>{{currentDate | date}}</b></div>
+            </section>    
+        </section>
+
+        <section class="main-body">    
+                <div class="cash">
+                    <span>A) </span>
+                    <input type="checkbox" id="cashInput" checked>
+                    <label for="cashInput">EFECTIVO Y CHEQUES BANCOMER</label>
+                </div>
+                <div class="checks">
+                    <span>B) </span>
+                    <input type="checkbox" id="checksInput">
+                    <label for="checksInput">CHEQUES DE OTROS BANCOS</label>
+                </div>
+                <div class="foreign-currency">
+                    <span>C) </span>
+                    <input type="checkbox" id="foreignInput">
+                    <label for="foreignInput">REMESAS SOBRE EL EXTRANJERO</label>
+                </div>
+                <section>
+
+                </section>
+        </section>
+
+    </section>
+
+    
+
+</section>

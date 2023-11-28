@@ -1,0 +1,40 @@
+<app-open-totals-button></app-open-totals-button>
+
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <!--Cards receipts section-->
+    <section class="p-2">
+        <div class="bg-[#219ebc] mx-3"><p class="text-center text-white text-lg font-bold">Vouchers</p></div>
+        <app-tarjetas [currencyValues]="cardsValues" 
+        [currencyType]="'cards'" 
+        [color]="'sky'"
+        (emitCurrencyData)="saveCurrency($event, 'cards')"></app-tarjetas>
+    </section>
+    <!-- Checks section-->
+    <section class="p-2">
+        <div class="bg-[#115f9a] mx-3"><p class="text-center text-white text-lg font-bold">Cheques</p></div>
+        <app-tarjetas 
+        [currencyValues]="checksValues" 
+        [currencyType]="'checks'"
+        [color]="'blue'" 
+        (emitCurrencyData)="saveCurrency($event, 'checks')"></app-tarjetas>
+    </section>
+    <!-- bank deposits section-->
+    <section class="p-2">
+        <div class="bg-amber-500 mx-3"><p class="text-center text-white text-lg font-bold">Fichas de depósito</p></div>
+        <app-tarjetas 
+        [currencyValues]="bankDepositsValues" 
+        [currencyType]="'bank_deposits'"
+        [color]="'amber'" 
+        (emitCurrencyData)="saveCurrency($event, 'bank_deposits')"></app-tarjetas>
+    </section>
+    <!-- credit notes section-->
+    <section class="p-2">
+        <div class="bg-purple-700 mx-3"><p class="text-center text-white text-lg font-bold">Notas de Crédito</p></div>
+        <app-tarjetas 
+        [currencyValues]="creditNotesValues" 
+        [currencyType]="'credit_notes'"
+        [color]="'purple'" 
+        (emitCurrencyData)="saveCurrency($event, 'credit_notes')"></app-tarjetas>
+    </section>
+
+</section>
